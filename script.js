@@ -33,11 +33,14 @@ function openMenu() {
         </div>
     `);
 
+    setTimeout(() => {
+        document.getElementById("menuButton").classList.add('open'); 
+    }, 0); // 
+
     body.insertAdjacentHTML("beforeend", `
         <div class="overlay" id="overlay"></div>
     `);
 
-   
     document.getElementById("closeMenu").addEventListener("click", closeMenu);
     document.getElementById("overlay").addEventListener("click", closeMenu);
 }

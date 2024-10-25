@@ -212,12 +212,17 @@ article > p {
 	.menu-button {
 		position: fixed;
 			top: 0px;
-  			right: 0px;
+  			right: -100%;
 		width: 70vw;
 		height: 100vh;
 		z-index: 1000;
 		background-color: white;
 		padding: 25px;
+		transition: right 0.3s ease;
+	}
+
+	.menu-button.open {
+		right: 0;
 	}
 
 	.mobile-nav {

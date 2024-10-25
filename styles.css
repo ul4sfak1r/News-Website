@@ -4,11 +4,11 @@
 
 html {
 	font-size: 15px;
+	font-family: Inter, sans-serif;
 }
 
 body {
 	padding: 7vh 10vw 0 10vw;
-	font-family: Inter;
 }
 
 header {
@@ -29,12 +29,12 @@ ul {
 	padding-left: 0;
 }
 
-li {
-	list-style-type: none;
-}
-
 ul:hover {
 	cursor: pointer;
+}
+
+li {
+	list-style-type: none;
 }
 
 .u-icon {
@@ -47,9 +47,8 @@ ul:hover {
 	display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 30px;
-	width: 80vw;
+		grid-row-gap: 50px;
 	max-width: 1500px;
-	grid-row-gap: 50px;
 }
 
 .first-box {
@@ -65,7 +64,6 @@ ul:hover {
 
 .full-width > img {
 	max-width: 100%;
-	object-fit: cover;
 }
 
 h1 {
@@ -80,7 +78,7 @@ p {
 .bigheader {
 	font-size: clamp(2.5rem, 4.5vw, 5rem);
 	margin-block: 0;
-	line-height: clamp(1, 1.2, 1.3);
+	line-height: 1;
 }
 
 #ReadMoreButton {
@@ -90,9 +88,11 @@ p {
 	border: none;
 	font-weight: 800;
 	font-size: clamp(0.8rem, 1vw, 1.3rem);
-	letter-spacing: 2.5px;
+	letter-spacing: 4px;
 	margin-top: 20px;
 	padding: 5%;
+	text-decoration: none;
+	text-align: center;
 }
 
 #ReadMoreButton:hover {
@@ -100,6 +100,7 @@ p {
 	color: white;
 	cursor: pointer;
 }
+
 
 /*-------------------------------------------*/
 
@@ -182,6 +183,10 @@ article > p {
 	color: hsl(236, 13%, 42%);
 }
 
+.hidden-mobile {
+	display: none;
+}
+
 /*----------------------------------------------------------*/
 
 @media (max-width: 768px) {
@@ -242,7 +247,7 @@ article > p {
 	/**/
 
 	.grid-container {
-		margin: 0;
+		margin-top: 20px;
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 0;
 		grid-row-gap: 30px;
@@ -251,18 +256,6 @@ article > p {
 
 	.first-box {
 		grid-template-columns: repeat(1, 1fr);
-	}
-
-	.full-width > img {
-		display: none;
-	}
-
-	.first-box > img {
-		display: block !important;
-		aspect-ratio: 1 / 1;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
 	}
 
 	.second-box {

@@ -51,7 +51,10 @@ function closeMenu() {
     const overlay = document.getElementById("overlay");
     
     if (menuButton) {
-        menuButton.remove(); 
+        document.getElementById("menuButton").classList.remove('open'); 
+        setTimeout(() => {
+            menuButton.remove();
+        }, 300)
     }
     if (overlay) {
         overlay.remove(); 
